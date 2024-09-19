@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>資訊安全與網路系統安全</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="plugins/codemirror/codemirror.css">
+    <link rel="stylesheet" href="plugins/codemirror/theme/monokai.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a onclick="ClickPAGE1();" class="nav-link">字母加/解密</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a onclick="ClickPAGE2();" class="nav-link">單字加/解密</a>
+                </li>
+
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">AdminLTE 3</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class  with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle nav-icon"></i>
+                                <p>
+                                    古典密碼學
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./SubstitutionCipher.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>替換式密碼</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./BruteForceCracking.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>暴力破解法</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index3.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>頻率分析</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="fas fa-circle nav-icon"></i>
+                                <p>
+                                    現代密碼學
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item menu-open">
+                                    <a href="#" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            對稱式加密
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="./2-1SymmetricEncryption.html" class="nav-link active">
+                                                <i class="far fa-dot-circle nav-icon"></i>
+                                                <p>XOR 運算</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-dot-circle nav-icon"></i>
+                                                <p>AES 演算法</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link ">
+                                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                                        <p>
+                                            非對稱式加密
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>公私鑰概念</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>RSA 演算法</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>數位簽章</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 id="PAGE1_title" class="m-0">對稱式加密－XOR 運算(串流加密)</h1>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <!-- Main row -->
+                    <div class="row">
+                        <!-- Left col -->
+                        <section id="" class="col-lg-12 content">
+                            <div class="container-fluid">
+                                <!-- Main row -->
+                                <div class="row">
+                                    <!-- Left col -->
+                                    <section id="PAGE1_section" class="col-lg-12">
+                                        <div class="container">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="card card-secondary">
+                                                            <div class="card-header">
+                                                                <h3 class="card-title">前情提要</h3>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <span>Alice想要傳訊息給Bob。</span>
+                                                                    </div>
+                                                                    <div class="col-lg-12">
+                                                                        <span>他們協議出一把金鑰，來為這次的訊息進行加解密。</span>
+                                                                    </div>
+                                                                    <div class="col-lg-12">
+                                                                        <table border="0" style="text-align:center;">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <br>
+                                                                                    <img class="img-fluid p-3" src="image/u1-4/p1.png" />
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="container">
+                                            <div class="container-fluid">
+                                                <div class="row align-items-center">
+                                                    <div class="col-lg-8">
+                                                        <div class="card card-secondary">
+                                                            <div class="card-header">
+                                                                <h3 class="card-title">步驟一</h3>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <span style="color:red;">加密</span>
+                                                                    </div>
+                                                                    <div class="col-lg-12">
+                                                                        <span>Alice 和 Bob 已協議金鑰為「字母K 」 還不太熟悉加密金鑰如何使用，想寄送「字母A 」給Bob。<br>（明文：A、加密金鑰：K）
+                                                                    </div>
+                                                                    <div class="col-lg-12 p-3">
+                                                                        <table border="0" style="text-align:center;">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <span></span>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <span>選擇字母</span>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <span>電腦編碼</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <span>明文字母</span>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select id="Letter_1" name="Letter_1" class="form-control" style="width: auto" onchange="showSelectedValue('Letter_1', 'ExplicitLetter_')">
+                                                                                    </select>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <table>
+                                                                                        <tr>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_1" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_2" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_3" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_4" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_5" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_6" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_7" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_8" /></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <span>⊕加密金鑰</span>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select id="Letter_2" name="Letter_2" class="form-control" style="width: auto" onchange="showSelectedValue('Letter_2','EncryptionKey_')">
+                                                                                    </select>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <table>
+                                                                                        <tr>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKey_1" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKey_2" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKey_3" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKey_4" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKey_5" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKey_6" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKey_7" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKey_8" /></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="3">
+                                                                                    <hr>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <span>密文</span>
+                                                                                </td>
+                                                                                <td>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <table>
+                                                                                        <tr>
+                                                                                            <td><input class="form-control" style="width:40px;" id="Encryption_1" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="Encryption_2" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="Encryption_3" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="Encryption_4" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="Encryption_5" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="Encryption_6" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="Encryption_7" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="Encryption_8" /></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="col-lg-5 p-3">
+                                                                        <span>答題狀況：</span><span id="EncryptionANS"></span>
+                                                                    </div>
+                                                                    <div class="col-lg-5 p-3">
+                                                                        <input type="button" value="送出" onclick="CheckANS('EncryptionANS', 'ExplicitLetter_', 'EncryptionKey_', 'Encryption_');" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                            <img class="img-fluid" src="image/u1-4/XOR互斥4.png" />
+                                                            <img class="img-fluid" src="image/u1-4/平台單元一 (1-4).gif" />
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                            <img class="img-fluid" src="image/u1-4/list.png" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br /><br />
+                                        <div class="container">
+                                            <div class="container-fluid">
+                                                <div class="row align-items-center">
+                                                    <div class="col-lg-8">
+                                                        <div class="card card-secondary">
+                                                            <div class="card-header">
+                                                                <h3 class="card-title">步驟二</h3>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <span style="color:red;">解密</span>
+                                                                    </div>
+                                                                    <div class="col-lg-12">
+                                                                        <span>Bob 收到密文後進行解密。 （解密時，要使用什麼加密金鑰呢 ?）</span>
+                                                                    </div>
+                                                                    <div class="col-lg-12 p-3">
+                                                                        <table border="0" style="text-align:center;">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <span></span>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <span>選擇字母</span>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <span>電腦編碼</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <span>密文</span>
+                                                                                </td>
+                                                                                <td>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <table>
+                                                                                        <tr>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_1" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_2" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_3" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_4" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_5" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_6" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_7" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="ExplicitLetter_8" /></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <span>⊕加密金鑰</span>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select id="Letter_3" name="Letter_3" class="form-control" style="width: auto" onchange="showSelectedValue('Letter_3','EncryptionKeyForDecrypt_')">
+                                                                                    </select>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <table>
+                                                                                        <tr>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKeyForDecrypt_1" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKeyForDecrypt_2" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKeyForDecrypt_3" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKeyForDecrypt_4" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKeyForDecrypt_5" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKeyForDecrypt_6" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKeyForDecrypt_7" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="EncryptionKeyForDecrypt_8" /></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="3">
+                                                                                    <hr>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <span>明文</span>
+                                                                                </td>
+                                                                                <td>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <table>
+                                                                                        <tr>
+                                                                                            <td><input class="form-control" style="width:40px;" id="showExplicit_1" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="showExplicit_2" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="showExplicit_3" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="showExplicit_4" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="showExplicit_5" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="showExplicit_6" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="showExplicit_7" /></td>
+                                                                                            <td><input class="form-control" style="width:40px;" id="showExplicit_8" /></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="col-lg-5 p-3">
+                                                                        <span>答題狀況：</span><span id="EncryptionANS"></span>
+                                                                    </div>
+                                                                    <div class="col-lg-5 p-3">
+                                                                        <input type="button" value="送出" onclick="CheckANS('ExpliciANS', 'ExplicitLetter_', 'EncryptionKeyForDecrypt_', 'showExplicit_');" />
+                                                                    </div>
+                                                                    <br />
+                                                                    <div class="col-lg-12">
+                                                                        <span style="color:red;">XOR 運算的精隨</span>
+                                                                    </div>
+                                                                    <div class="col-lg-12">
+                                                                        <span>想想看，為何密文經由相同的金鑰，也能回推為明文？</span>
+                                                                    </div>
+                                                                    <div class="col-lg-12">
+                                                                        <span>可以再操作上方的XOR運算，從加解密的過程想一下為什麼哦！</span>
+                                                                    </div>
+                                                                    <div class="col-lg-12 text-center">
+                                                                        <br><br>
+                                                                        <h1><span style="color:red;">A⊕B=C 、C⊕B=A </span><span>WHY?</span></h1>
+                                                                        <br>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                            <img class="img-fluid" src="image/u1-4/XOR互斥4.png" />
+                                                            <img class="img-fluid" src="image/u1-4/平台單元一 (1-4)-2.gif" />
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                            <img class="img-fluid" src="image/u1-4/list.png" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!-- /.Left col -->
+                                </div>
+                                <!-- /.row (main row) -->
+                            </div><!-- /.container-fluid -->
+                        </section>
+                        <!-- /.Left col -->
+                    </div>
+                    <!-- /.row (main row) -->
+                </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <!--<script src="dist/js/demo.js"></script>-->
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard.js"></script>
+    <!-- CodeMirror -->
+    <script src="plugins/codemirror/codemirror.js"></script>
+    <script src="plugins/codemirror/mode/css/css.js"></script>
+    <script src="plugins/codemirror/mode/xml/xml.js"></script>
+    <script src="plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+    // 畫面切換
+    var PAGE1_section, PAGE2_section, data_article;
+
+    function setTitleAndSection() {
+        PAGE1_section = document.getElementById("PAGE1_section");
+        PAGE2_section = document.getElementById("PAGE2_section");
+    }
+    function ClickPAGE1() {
+        setTitleAndSection();
+        PAGE1_section.hidden = false;
+        PAGE2_section.hidden = true;
+    }
+
+    function ClickPAGE2() {
+        setTitleAndSection();
+        PAGE1_section.hidden = true;
+        PAGE2_section.hidden = false;
+    }
+
+    //預設值
+    var data = ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+    var Letter_1 = document.getElementById("Letter_1");
+    var Letter_2 = document.getElementById("Letter_2");
+    var Letter_3 = document.getElementById("Letter_3");
+
+    for (var i = 0; i < data.length; i++) {
+        var opt1 = new Option(data[i], data[i]);
+        Letter_1.options.add(opt1);
+        var opt2 = new Option(data[i], data[i]);
+        Letter_2.options.add(opt2);
+        var opt3 = new Option(data[i], data[i]);
+        Letter_3.options.add(opt3);
+    }
+
+    function showSelectedValue(changeID, setID) {
+        var ID = $("select[name='" + changeID + "']").val();
+        var ToTwo = ID.charCodeAt().toString(2).split('');
+        var value = document.getElementById(setID + 1);
+        value.value = 0;
+        for (var i = 2; i <= 8; i++) {
+            value = document.getElementById(setID + i);
+            value.value = ToTwo[i - 2];
+        }
+        //console.log("setID:", setID, "getData:", ID, "DataToNumber:", ID.charCodeAt(), "ToTwo:", ID.charCodeAt().toString(2));
+        //console.log("ToTwo:", ToTwo);
+    }
+
+    function CheckANS(ANS, xor1, xor2, checkdata) {
+        var CheckANS = document.getElementById(ANS);
+        var outputstring = "正確";
+        for (var i = 1; i <= 8; i++) {
+            var value1 = document.getElementById(xor1 + i).value;
+            var value2 = document.getElementById(xor2 + i).value;
+            var valueANS = document.getElementById(checkdata + i).value;
+            var check = "1";
+            if (value1 == value2) {
+                check = "0";
+            }
+            if (check != valueANS) {
+                outputstring = "錯誤";
+            }
+            //console.log("value1:", value1, "value2:", value2, "valueANS:", valueANS, "check:", check);
+        }
+        CheckANS.innerHTML = outputstring;
+    }
+</script>
