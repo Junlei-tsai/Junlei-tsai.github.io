@@ -18,4 +18,5 @@ git push -u orgin main (推到遠端，也就是網路上的git數據庫)
 ### 備註
 1. 注意圖片檔的資料夾名稱大小寫
 2. 目前還不知道怎麼更新檔案or更新資料夾，最慘可能就刪掉整個repo重裝最快哈哈
+> 更新檔案可參考此影片：https://www.youtube.com/watch?v=qJmsbOYxvco&ab_channel=withSairish
 
